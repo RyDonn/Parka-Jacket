@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class TemperatureControlSimulation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter a temperature in Celcius")
+        int currentTemperature = scanner.nextInt()
+        System.out.println("Please enter a  target temperature in Celcius")
+        int targetTemperature = scanner.nextInt()
+        // Create an instance of the TemperatureController class
+        TemperatureController temperatureController = new TemperatureController(targetTemperature, currentTemperature); // Set the target temperature
+        int controlOutput = 0;
+        while (controlOutput != targetTemperature) {
+
+
+
+            // Call the controlTemperature method to get the control output
+            controlOutput = temperatureController.controlTemperature(targetTemperature,currentTemperature);
+
+            System.out.println("Control Output: " + controlOutput);
+            // Use the control output to activate/deactivate relevant mechanisms in your jacket
+
+            System.out.println("---------------");
+        }
+        System.out.println("Target temperature has been reached" + controlOutput);
+    }
+}
