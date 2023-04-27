@@ -1,0 +1,44 @@
+public class TemperatureController {
+    private int targetTemperature;
+    private int currentTemperature;
+
+    public TemperatureController(int targetTemperature, int currentTemperature) {
+        this.targetTemperature = targetTemperature;
+        this.currentTemperature = currentTemperature;
+
+    }
+
+    public int controlTemperature(int currentTemperature, int currentTemperature ) {
+
+
+        //Calculate temperature difference
+        int diff = targetTemperature - currentTemperature;
+
+        // Calculate control output
+        // Use diff to determine whether the jacket needs to absorb or release energy
+        if(diff > 0){
+            absorbE()
+        }
+        else-if(diff < 0){
+            releseE()
+        }
+        currentTemperature = controlOutput;
+
+
+
+        return controlOutput;
+    }
+
+    public int absorbE(){
+        //initiate energy absorption
+        currentTemperature--; //decrement the value of the current tempeture
+
+    }
+
+    public int releseE(){
+        //initiate energy release
+        currentTemperature++; //increment value of current temperature
+
+    }
+
+}
